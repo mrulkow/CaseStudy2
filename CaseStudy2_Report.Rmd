@@ -1,0 +1,277 @@
+---
+title: 'Stats 250: Case Study 2 Report'
+subtitle: "Word Count: replace this text with your report's word count"
+author: "Your Name and Partner Name (if applicable)"
+date: "`r Sys.Date()`"
+geometry: margin=0.75in
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+In the bottom right window, click on the file titled `CaseStudy2_Instructions.pdf`. Thoroughly read through the background and assignment instructions in order to complete the case study below. We encourage you to work on this assignment with a partner, but only active lab approach students may submit their work in pairs.
+
+**Note:** only *active* lab approach students may submit case study assignments with a partner. Your partner must be in the same lab section - and you both must be in attendance during the corresponding lab session. Failure to adhere to these rules will result in a penalty applied to your case study score. *Students that correctly submit as a team will receive 5 points of extra credit towards their final case study score.*
+
+
+\newpage
+
+
+## Goal
+
+Some of the research linked in the instruction file suggests that strength and agility are inversely related among NFL athletes. Your task is to analyze the available data and decide whether it supports or contradicts this claim. Namely, we wish to analyze how an athlete’s strength (measured by vj) relates to their agility (measured by sp) by exploring the following research questions:
+
+1. What association, if any, exists between athlete strength and agility, as measured by vj and sp?
+2. What association, if any, exists between athlete strength and endurance, as measured by vj and bp?
+3. What association, if any, exists between athlete endurance and agility, as measured by bp and sp?
+4. Does athlete endurance (as measured by bp) influence the association between strength (vj) and agility (sp)?
+
+
+***
+
+
+## Data
+
+The `combine` data set contains variables recorded from a random sample of n = 200 prospective NFL athletes who participated in the NFL Combine between 1999 and 2016. The variables include:
+
+- `bp.endurance`: An indicator of whether the athlete fell above or below the combine average number of completed reps before failure (Above Average Endurance or Below Average Endurance)
+- `vj.strength`: An indicator of whether the athlete fell above or below the combine average vertical jump cleared (Above Average Strength or Below Average Strength)
+- `sp.agility`: A variable recording the completion time of the 3 cone drill (measured in seconds)
+
+
+Use the following code chunks to read in and preview the data set. 
+
+```{r read_data}
+load("combine.rda")
+```
+
+```{r preview_data}
+head(combine)
+```
+
+And be sure to load in any necessary packages!
+
+```{r load_packages}
+library(ggplot2)
+```
+
+
+
+\newpage
+
+## Analysis for Research Question 1
+
+Use the following code chunks to complete the analysis for Research Question 1 - *What association, if any, exists between athlete strength and agility, as measured by vj and sp?*
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+# Feel free to use this code chunk as a calculator to compute the estimated effect size
+
+```
+
+**Estimated Effect Size**: replace this text with your estimated effect size
+
+
+
+\newpage
+
+## Analysis for Research Question 2
+
+Use the following code chunks to complete the analysis for Research Question 2 - *What association, if any, exists between athlete strength and endurance, as measured by vj and bp?*
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+# Feel free to use this code chunk as a calculator to compute proportions of interest
+
+```
+
+
+
+\newpage
+
+## Analysis for Research Question 3
+
+Use the following code chunks to complete the analysis for Research Question 3 - *What association, if any, exists between athlete endurance and agility, as measured by bp and sp?*
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+
+\newpage
+
+## Analysis for Research Question 4
+
+Use the following code chunks to complete the analysis for Research Question 4 - *Does athlete endurance (as measured by bp) influence the association between strength (vj) and agility (sp)?*
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+
+```{r}
+# Run this chunk to create a data set for those with above average endurance
+above.average.endurance <- subset(combine, bp.endurance == "Above Average Endurance")
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+# Feel free to use this code chunk as a calculator to compute the estimated effect size
+
+```
+
+**Estimated Effect Size**: replace this text with your estimated effect size
+
+
+
+```{r}
+# Run this chunk to create a data set for those with below average endurance
+below.average.endurance <- subset(combine, bp.endurance == "Below Average Endurance")
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+# Feel free to use this code chunk as a calculator to compute the estimated effect size
+
+```
+
+**Estimated Effect Size**: replace this text with your estimated effect size
+
+
+
+\newpage
+
+## Report
+
+## Introduction
+
+Replace this text with your first paragraph...
+
+
+
+\newpage
+
+
+## Summary of Findings
+
+Replace this text with your first paragraph...
+
+Replace this text with your second paragraph...
+
+Replace this text with your third paragraph...
+
+
+
+\newpage
+
+## Discussion and Recommendation
+
+Replace this text with...
+
+
+
+
+\newpage
+
+## Word Count
+
+Self-report the word count of your report by following the steps below:
+
+1. Highlight the text in your "Report" section above (i.e., the "Introduction", "Summary of Findings", and "Discussion and Recommendation" sections - but *not* the coding analyses completed above the report)
+2. In the top toolbar, click Edit > Word Count
+3. Report the value of "Selected words" at the *top* of this document (below the title field and above the authors field)
+
+
+***
+
+
+## Submission Instructions
+
+Carefully follow the instructions below to properly submit your completed work.
+
+1. At the top of the document, updated the `author` field (in quotes!). *If you are submitting with a partner*, please include their name in the `author` field as well. Note: both names must appear in the same set of quotes (e.g., "John Smith and Jane Doe"). Do not change any of the other fields (title, date, output) at the top of the document. 
+
+2. Click the **Knit** button. (*If you receive an error, check out the file titled "Tips_and_Common_Errors" found in the bottom right window.*)
+
+3. Click on the file titled `CaseStudy2_Report.pdf` in the bottom right window and confirm that your work has knitted properly. 
+
+4. In the bottom right window, check the box next to `CaseStudy2_Report.pdf`
+
+5. Click More > Export. Note: you may see a gear icon instead of "More".
+
+6. Click Download and save the file to your computer. Do not change the name of the file (CaseStudy2_Report.pdf). 
+
+7. Head to Gradescope and navigate to the corresponding assignment. 
+
+8. Click "Submit PDF" and upload your saved `CaseStudy2_Report.pdf` file. 
+
+9. Assign the pages of your document to the corresponding questions in Gradescope. Be sure that each question has *all* of the corresponding pages attached (i.e., Analysis for Research Question 1 may be pages 3 *and* 4 of your document. )
+
+10. Click "Submit". Confirm that the pages of your document match the corresponding questions in Gradescope.
+
+11. *If you are submitting with a partner*, click on "Group Members" at the bottom of the webpage. Search for your partner's name and click "Add".
+
+
+**Note:** only *active* lab approach students may submit lab assignments with a partner. Your partner must be in the same lab section - and you both must be in attendance during the corresponding lab session. Failure to adhere to these rules will result in a penalty applied to your lab score. Students that correctly submit as a team will receive 5 points of extra credit towards their final case study score.
+
+**Note:** you can resubmit as many times as needed until the posted deadline.
+
+
+Congratulations - you have completed the second case study!
+
+
+
